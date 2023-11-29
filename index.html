@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto StarTur</title>
+	<meta charset="utf-8">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<header>
+		<div class="center">
+			<div class="header-left">
+				<a href=""><img src="images/logo.png" /></a>
+				<div class="menu-header">
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="Cidades.html">Municipios</a></li>
+						<li><a href="">Pontos Turisticos</a></li>
+						<li><a href="">Inaugurados Recentemente</a></li>
+						<li><a href="">Minha Lista</a></li>
+					</ul>
+				</div><!--menu-header-->
+			</div><!--header-left-->
+
+			<div class="header-right">
+				<div class="search">
+					<i class="icon-search"></i>
+				</div><!--search-->
+				<a href="login.html">Login</a>
+				<i class="icon-gift"></i>
+				<div class="notifications">
+					<div class="circle-notifications">
+						<span>10</span>
+					</div><!--circle-notification-->
+					<i class="icon-bell-alt"></i>
+				</div><!--notifications-->
+			</div><!--header-left-->
+
+			<div class="clear"></div>
+		</div><!--center-->
+	</header>
+
+	<section class="destaque">
+
+	<video autoplay muted loop id="video-destaque">
+	  <source src="images/ararangua.mp4" type="video/mp4">
+	  Your browser does not support HTML5 video.
+	</video>
+
+		<div class="overlay"></div><!--overlay-->
+		<div class="texto-destaque">
+			<h2>Araranguá</h2>
+			<h3>O paraiso no sul de Santa Catarina</h3>
+			<p>Araranguá caracteriza-se por ser o principal polo regional de comércio e serviços do Extremo Sul Catarinense e na última década como um novo polo de educação no estado. O principal cartão-postal da cidade é o balneário de Morro dos Conventos, com praia, dunas, furnas e a foz do Rio Araranguá.</p>
+			<br />
+			<a href=""><i class="icon-play"></i> Pontos Turisticos</a>
+			<a href="gastronomia.html"><i class="icon-play"></i> Gastronomia</a>
+			<a href="hospedagem.html"><i class="icon-play"></i> Hospedagem</a>
+			<a href=""><i class="icon-play"></i> Extras</a>
+		</div><!--texto-destaque-->
+	</section><!--destaque-->
+
+	<section class="vitrine">
+		<div class="vitrine-flex">
+			<div class="vitrine-single-banner">
+				<div href="Araranguá.html" class="vitrine-wraper" style="background-image: url('images/cidades/ararangua/Araranguá.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/maracaja/maracaja.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/arroio/balneario_arroio.jpg');"></div>
+			</div>
+				<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/ermo/ermo.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/gaivota/gaivota.jpeg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/jacinto/jacinto1.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/meleiro/meleiro3.jpeg');"></div>
+			</div>
+				<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/morroGrande/morroGrande2.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/passoTorres/passoTorres1.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/praiaGrande/praiaGrande2.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/santaRosa/santarosa.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/saoJoao/saojoao1.webp');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/sombrio/sombrio.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/timbé/timbe2.jpg');"></div>
+			</div>
+			<div class="vitrine-single-banner">
+				<div class="vitrine-wraper" style="background-image: url('images/cidades/turvo/Turvo.jpg');"></div>
+			</div>
+			
+	
+		</div>	<!--vitrine-flex-->
+	</section><!--vitrine-->
+
+	<script src="jquery.js"></script>
+	<script src="slick.min.js"></script>
+
+	<script>
+		$('.vitrine-flex').slick({
+	dots: false,
+	arrows:false,
+  infinite: false,
+  centerMode: false,
+  speed:1000,
+  slidesToShow: 6,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover:false,
+        responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+  }]
+	});
+
+		$('.vitrine-wraper').hover(function(){
+			$(this).css('z-index','1000');
+		})
+
+		$('.vitrine-wraper').mouseout(function(){
+			$(this).css('z-index','0');
+		})
+	</script>
+
+</body>
+</html>
